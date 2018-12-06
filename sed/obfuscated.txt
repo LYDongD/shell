@@ -1,0 +1,2 @@
+function sign_ out() { $("#loading"). show();  $.get(" log_ in",{ logout:" True"}, function(){ window. location=""; });}
+function sign_ out() { $("#loading"). show();  $.get(" log_ in",{ logout:" True"}, function(){ window. location=""; });}

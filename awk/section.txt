@@ -1,0 +1,15 @@
+line with pattern1 
+line with pattern2 
+line with pattern3
+line end with pattern4
+line with pattern5
+line with pattern0 
+line with pattern1 
+line with pattern2
+line with pattern3 
+line with pattern4 
+line with pattern5 
+line with pattern6 
+line with pattern7 
+line with pattern8 
+line with pattern9 
