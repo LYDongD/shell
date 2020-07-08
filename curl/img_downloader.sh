@@ -13,16 +13,21 @@ fi
 for i in {1..4}
 do
     case $1 in 
-    -d)shift;
-    directory=$1;shift;;
-    *)url=$1{url:-$1};shift;
+    -d) 
+       shift; #if match -d, then shift to next param to set dir
+       directory=$1; 
+       shift; #if match dir, shift to next param to set url
+       ;; # break
+
+    *) #default
+       url=${url:-$1}; 
+       shift;
+       ;;
     esac
 done
 
+
 mkdir -p $directory
 baseurl=$(echo $url | egrep -o "https?://[a-z.]+")
-
-#request
-curl -s $url | egrep -o "<img src=[^>]*>" | sed 's/<img src=\"\([^"]\).*/\1/g' > /tmp/$$.list
-
-
+echo "url: ${url}"
+echo "baseUrl: ${baseurl}"
